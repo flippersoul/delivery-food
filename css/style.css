@@ -1,0 +1,536 @@
+*{
+    /* Свойство, чтобы правильно высчитывались высота и ширина элементов */
+    box-sizing: border-box;
+}
+.container{
+    /* чтобы  максимальная блока длина была 1200px */
+    max-width: 1200px; 
+    /* чтобы контент в блоке всегда был по центру */ 
+    margin: auto; 
+}
+.header{
+    /* чтобы элементы выстроились горизонтально в ряд */
+    display: flex;
+    /* чтобы элементы стояли по центру */
+    align-items: center;
+    /* чтобы элементы были раскиданы по краям и между ними было одинаковое расстояние */
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.input{
+    padding: 8px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    font-size: 16px;
+    /* чтобы сверху и снизу было расстояние */
+    line-height: 24px;
+    /* Отступ слева */
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    /* Установление четкой позиции */
+    background-position: left 11px center;
+    /* Отступ слева */
+}
+.input-address{
+    /* Чтобы поисковая строка занимала 80% свободного места */
+    flex: 0.8;
+    /* Чтобы добавить картинку в поисковую строку, чтобы выйти к картинке использую ../  */
+    background-image: url(../img/home.svg);
+}
+.buttons{
+    display: flex;
+    align-items: center;
+}
+.button{ 
+    display: flex;
+    align-items: center;
+    /* Установка отступа слева и по краям  p8-16 */
+    padding: 8px 16px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+    border-radius: 2px;
+    color: #595959;
+    font-size: 16px;
+    line-height: 24px;
+}
+.button-card-text{
+    margin-right: 10px;
+}
+.card-buttons{
+    display: flex; 
+    align-items: center;
+    margin-top : 24px;
+}
+.card-price-bold{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 30 px; 
+}
+.button-primary{
+    background: #1890FF;
+    border: 1px solid #1890FF;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+.button-icon{
+    margin-right: 6px;
+    /* Выравнивание по вертикали  vertical-align: middle;*/
+   
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 44px;
+}
+.promo{
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+    background: #FFF1B8 url(../img/promo-image.png) no-repeat center right -100px / 600px;
+    border-radius: 10px;
+    padding: 68px 70px;
+    margin-bottom: 56px;
+}
+.promo-text{
+    max-width: 538px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+color: #302C34;
+}
+.promo-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 39px;
+    line-height: 46px;
+    color: #302C34;
+
+}
+.input-search{
+    background-image: url(../img/search.svg);
+    width: 306px;
+    margin-left: auto;
+}
+.section-heading{
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+}
+.section-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+    margin: 0;
+    margin-right: 30px;
+}
+.card{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    /* Свойство, скрывающее все за пределами карточки */
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 32%;
+    text-decoration: none;
+}
+.cards{
+    display: flex;
+    /* Свойство, если карточка не помещается, то переносить на следующую строку */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* Чтобы карточки раскидало и было расстояние  */
+    justify-content: space-between;
+}
+.card-image{
+    width: 384px;
+    height: 250px;
+    /* Свойство, если картинка будет неподходящего размера */
+    object-fit: cover;
+} 
+.card-text{
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+.card-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+}
+.card-title-reg{
+    font-weight: 400 ;
+}
+.card-tag{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFF ;
+    background: #262626;
+    border-radius: 2px;
+    padding: 1px 8px;
+}
+.card-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.rating{
+    margin-right: 26px;  
+    color: #FFC107; 
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+.ingredients{
+    color: #8C8C8C;
+    font-size: 18px;
+    line-height: 21px;
+}
+.price , 
+.category{
+    color: #8C8C8C;
+    font-size: 18px;
+    line-height: 32px;
+}
+.category{
+    /* Если текст не вмещается, то концовку заменять на ... */
+    text-overflow: ellipsis;
+    /* Все, что выходит за рамки блока - скрывается */
+    overflow: hidden;
+    /* Запрет на перенос строк */
+    white-space: nowrap;
+    min-width: 150px;
+}
+.price{
+    margin-right: 10px;
+}
+.price:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #8C8C8C;
+    /* Делаем элемент строчно-блочным */
+    display: inline-block;
+    /* Выравнивание по-середине */
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.main{
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+.footer-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer{
+    /* Отступы сверху и снизу 60px, а 0 по краям */
+    padding: 60px 0;
+}
+.footer-link{
+    display: inline-block;
+    color: #595959;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+/* Для всех блоках, содержащихся в .footer-link, но не в последнем */
+.footer-link:not(:last-child){
+    margin-right: 15px;
+}
+.footer-nav{
+    /* Чтобы прибить его к левой стороне */
+    margin-right: auto;
+    margin-left: 35px;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-link:not(:last-child){
+     margin-right: 21px;
+}
+.modal{
+    /* Чтобы окно всегда было на экране и не прокручивалось */
+    position: fixed ;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    /* Цвет с непрозрачностью */
+    background: rgba(0, 0, 0, 0.4);
+    /* display: flex; Чтобы окно всегда было по центру */
+    display: none;
+}
+.is-open{
+     display: flex;
+}
+.modal-dialog{
+    /* По умолчанию окно будет 780px, но не более 95% */
+    max-width: 780px;
+    width: 95%;
+    /*  min-height: 552px; Минимальная высота будет 552px, но если больше, то будет прокручиваться окно */
+    background: #FFFFFF;
+    border-radius: 5px; 
+    /* Чтобы окно всегда было по центру */    
+    margin: auto;
+    padding: 40px 45px;
+}
+.modal-title{
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.food-row{
+    display: flex;
+    align-items: flex-start ;
+    justify-content: space-between ;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 15px;
+}
+.food-price{
+    /* Прижмем слева */
+    margin-left: auto;
+    margin-right: 47px; 
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+}
+.modal-pricetag{
+    background: #262626;
+    border-radius: 5px;
+    color: #FFF ;
+    padding: 15px 20px;
+    font-size: 20px;
+    line-height: 23px;
+}
+.food-counter{
+    display: flex; 
+    align-items: center ;  
+}
+.counter{
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.counter-button{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #40A9FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 39px;
+    height:  32px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #40A9FF;
+}
+.food-name{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+.close{
+    font-size: 36px;
+    border: none;
+    /* Прозрачный фон */
+    background-color: transparent;
+}
+.modal-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-body{
+     margin-bottom: 52px;
+}
+.footer-buttons{
+     display: flex; 
+     align-items: center;
+}
+/*
+    Адаптивность
+Чтобы браузер понимал,
+что на маленьких экранах
+необходимо использовать
+другие правила css 
+используем директивы
+медиа-запросы
+Правило включается
+только тогда, когда
+выполяется условие в 
+скобках
+*/
+@media(max-width: 1366px){
+    .container{
+        max-width: 960px;
+    }
+    .promo{
+        background-position: center right -100px;
+        background-size: 500px;
+    }
+    .rating{
+        margin-right: 15px;
+    }
+    .category,
+    .price{
+        font-size: 14px;
+    }
+}
+@media(max-width: 992px){
+    .container{
+        max-width: 750px;
+    }
+    .promo{
+        padding: 50px;
+        background-size: 400px; 
+        background-position: center right -120px;
+    }
+    .promo-text{
+        font-size: 18px;
+        max-width: 400px;
+    }
+    .card{
+        flex-basis: 49%;
+    }
+    .footer-link{
+        font-size: 16px;
+    }
+}
+@media(max-width: 768px){
+    .container{
+        max-width: 560px;
+    }    
+    .card .rating{
+        /* У него было  flex-basis: 100%; */
+        flex-basis: 49%;
+    }
+    .card-title{
+        font-size: 18px;
+    }
+    .promo-title{
+        font-size: 24px;
+        line-height: 1.4;  
+    }
+    .promo-text{
+        margin-top: 0;
+    }
+    .promo{
+        background-size: 350px;
+        background-position: center right -200px;
+    }
+}
+@media(max-width: 578px){
+    .container{
+        width: 90%;
+    } 
+    .header{
+        flex-wrap:wrap;
+    }
+    /* Сделаем, чтобы input adress был по счету последним */
+    .input-address{
+        margin-top: 15px;
+        order: 5;
+        /* Растянуть на всю ширину */
+        flex: 1;
+    }
+    .promo{
+        background-image: none;
+    }
+    .promo-title{
+        margin-bottom: 10px;
+    }
+    .section-title{
+        font-size: 20px;
+    }
+    .card{
+        flex-basis: 100%;
+    }
+    .card-image{
+        width: 100%;
+    }
+    .footer{
+        padding: 30px 0;
+    }
+    .footer-block{
+        /* Чтобы все выравнивалось по верхней части */
+        align-items: flex-start;
+    }
+    .footer-nav{
+        margin-left: 0;
+        margin-right: 0;
+        order: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-logo{
+        margin-right: 15px;
+        order: 1;
+    }
+    .social-links{
+        order: 2;
+    }
+}    
+@media(max-width: 480px){
+    .button-text{
+        display: none;
+    }
+    .button{
+        min-height: 40px;
+    }
+    .button-icon{
+        margin: 0; 
+    }
+    .promo{
+        padding: 20px;
+    }
+    .section-heading{
+        flex-wrap: wrap;
+ }
+    .footer-block{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+ }
+    .footer-logo{
+        order: 0;
+        margin-bottom: 20px;
+ }
+    .footer-nav{
+        margin-bottom: 20px;
+        text-align: center;
+ }
+      .footer-link:not(:last-child){
+         margin-right: 0;
+ }
+}
